@@ -10,8 +10,9 @@
 const http = require("http");
 //2、建立服务
 const server = http.createServer((request, response) => {
-    let { url, method } = request; //对象的解构赋值
-    //设置响应头信息
+    // 请求对象中有很多信息可以通过解构来完成；
+    let { url, method } = request; //对象的解构值
+    //设置响应头信息赋
     //解决中文乱码
     response.setHeader("Content-Type", "text/html;charset=utf-8")
     if (url == "/register" && method == "GET") {

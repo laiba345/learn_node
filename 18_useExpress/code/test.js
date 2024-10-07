@@ -20,8 +20,12 @@ import fs from "fs-then";
  *  - bodyParser是一个中间件，用于解析请求体中的数据，使其在req.body中可用；
  *  - 支持各种数据格式，最常用的是JSON和URL编码格式
  *      - bodyParser.json(); 解析JSON格式的请求体
+ *          - 例如；
+ *          { "name": "kk", "age": 30 } 解析后可以通过req.body访问
+ *              - 即为 req.body = { name: "kk", age: 30 }
  *      - bodyParser.urlencoded(); 用于解析URL编码格式的请求体
- *          - application/x-www-form-urlencoded
+ *          - application/x-www-form-urlencoded 即 name=John&age=30 的形式
+ *          - 通过bodyParser也可以将其解析为 req.body = { name: "John", age: "30" }
  */
 import bodyParser from "body-parser";
 

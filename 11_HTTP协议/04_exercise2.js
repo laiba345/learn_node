@@ -6,7 +6,7 @@
         设置响应状态描述        response.statusMessage （ 用的非常少 ）
         设置响应头信息          response.setHeader('头名', '头值')
         设置响应体              response.write('xx')
-                              response.end('xxx')
+                               response.end('xxx')
  */
 // write 和 end的两种使用情况
 //1. write 和 end 的结合使用 响应体相对分散
@@ -26,6 +26,7 @@
 const http = require('http');
 //创建服务对象
 const server = http.createServer((request, response) => {
+    // 甚至可以直接返回一个界面；
     response.end(`
     <!DOCTYPE html>
     <html lang="en">

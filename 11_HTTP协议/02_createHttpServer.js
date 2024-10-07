@@ -8,6 +8,7 @@ const server = http.createServer((request, response) => {
     response.end('Hello HTTP server');
 });
 //3. 监听端口, 启动服务
+// 可以直接写，也可以通过
 server.listen(9000, () => {
     console.log('服务已经启动, 端口 9000 监听中...');
 })

@@ -2,11 +2,11 @@
 const express = require('express');
 //创建应用对象
 const app = express();
-//创建 get 路由
+//创建 get 路由，这是最基础的路由的写法，路由的路径，以及背后接上回调，请求以及响应全都拉满
 app.get('/home', (req, res) => {
     res.send('网站首页');
 });
-//首页路由
+// 首页路由
 app.get('/', (req, res) => {
     res.send('我才是真正的首页');
 });

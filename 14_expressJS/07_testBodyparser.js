@@ -5,7 +5,7 @@
 const bodyParser = require('body-parser');
 // 3. 获取中间件函数
 //处理 querystring 格式的请求体
-let urlParser = bodyParser.urlencoded({ extended: false }));
+let urlParser = bodyParser.urlencoded({ extended: false });
 //处理 JSON 格式的请求体
 let jsonParser = bodyParser.json();
 // 4. 设置路由中间件，然后使用request.body来获取请求体数据

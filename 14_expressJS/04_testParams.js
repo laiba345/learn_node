@@ -8,6 +8,7 @@ const express = require('express');
 const app = express();
 //获取请求的路由规则
 app.get('/request', (req, res) => {
+    // 请求中有很多参数可供使用；
     //1. 获取报文的方式与原生 HTTP 获取方式是兼容的
     console.log(req.method);
     console.log(req.url);
@@ -23,6 +24,7 @@ app.get('/request', (req, res) => {
 
 app.get('/:id.html', (req, res) => {
     // 首先来获取路由参数的话，肯定是通过req.params.id来获取
+    // 前缀中 带有 : 的表示一个 动态参数，可以匹配URL中任意的值，并将其存储在 req.params当中；
     res.send('商品详情, 商品 id 为' + req.params.id);
 });
 //启动服务
