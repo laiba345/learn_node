@@ -13,10 +13,12 @@
         - cookie 是保存在浏览器端的一小块数据
         - cookie 是按照域名划分保存的
     - 简单示例
+      ```
             域名                cookie
         www.baidu.com         a=100; b=200
         www.bilibili.com  xid=1020abce121; hm=112411213
         jd.com x=100          ocw=12414cce
+      ```
     - cookie的特点
         - 浏览器向服务器发送请求时，会自动将 **当前域名下** 可用的 cookie 设置在请求头中，然后传递给服务器
         - 这个请求头的名字也叫 cookie ，所以将 cookie 理解为一个 HTTP 的请求头也是可以的
